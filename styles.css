@@ -1,9 +1,9 @@
-/* Apply a gradient background */
+/* Apply a soft cotton candy gradient */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 50px;
-    height: 100vh; /* Full-screen height */
-    background: linear-gradient(to bottom, #87CEFA, #E0FFFF); /* Light blue gradient */
+    height: 100vh; /* Full height */
+    background: linear-gradient(to bottom, #FFB6C1 10%, #FFDDEE 40%, #FFFFFF 100%);
 }
