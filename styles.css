@@ -4,4 +4,12 @@ body {
     margin: 0;
     padding: 50px;
     background-color: #f4f4f4;
+    /* Apply a gradient background */
+body {
+    background: linear-gradient(to bottom, #87CEFA, #E0FFFF);
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 }
