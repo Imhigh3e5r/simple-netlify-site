@@ -1,5 +1,6 @@
 /* General Styles */
 /* Apply a soft light blue gradient */
+/* Apply a soft light blue gradient */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -8,6 +9,7 @@ body {
     height: 100vh; /* Full height */
     background: linear-gradient(to bottom, #B3E5FC 10%, #E3F2FD 40%, #FFFFFF 100%);
 }
+
 
 /* Title */
 h1 {
