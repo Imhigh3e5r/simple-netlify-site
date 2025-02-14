@@ -44,23 +44,25 @@ function playGame(userChoice) {
 }
 
 // Set the version number here
-const version = "1.0.0";
+const version = "1.0.1"; // Updated version
 
 // Automatically update version in the footer
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("1.0").innerText = version;
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("version-number").innerText = version;
 });
-
 
 // Function to create confetti
 function launchConfetti() {
-    const confettiCount = 40; // Number of confetti pieces
+    const confettiCount = 50; // Increased confetti count for a fuller effect
     for (let i = 0; i < confettiCount; i++) {
         let confetti = document.createElement("div");
         confetti.classList.add("confetti");
-        confetti.style.left = Math.random() * 100 + "vw"; // Random horizontal position
-        confetti.style.animationDuration = Math.random() * 1.5 + 0.5 + "s"; // Random speeds
-        confetti.style.width = Math.random() * 8 + 4 + "px"; // Random sizes
+
+        // Randomize position, size, and animation duration
+        confetti.style.left = Math.random() * 100 + "vw"; 
+        confetti.style.top = Math.random() * 30 - 20 + "vh"; // Start from varying heights
+        confetti.style.animationDuration = Math.random() * 1.8 + 0.7 + "s"; 
+        confetti.style.width = Math.random() * 10 + 5 + "px"; 
         confetti.style.height = confetti.style.width;
 
         document.body.appendChild(confetti);
@@ -68,6 +70,6 @@ function launchConfetti() {
         // Remove confetti after animation ends
         setTimeout(() => {
             confetti.remove();
-        }, 1500);
+        }, 2000); // Slightly longer duration to make it smoother
     }
 }
