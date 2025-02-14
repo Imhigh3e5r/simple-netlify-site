@@ -1,7 +1,4 @@
 /* General Styles */
-/* Apply a soft light blue gradient */
-/* Apply a soft light blue gradient */
-/* Apply a very subtle blue gradient */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -10,8 +7,6 @@ body {
     height: 100vh; /* Full height */
     background: linear-gradient(to bottom, #B3E5FC 5%, #D6F1FF 50%, #EAF8FF 100%);
 }
-
-
 
 /* Title */
 h1 {
@@ -32,19 +27,29 @@ h1 {
     height: 150px;
     cursor: pointer;
     border-radius: 15px;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .choices img:hover {
-    transform: scale(1.1);
+    transform: scale(1.15); /* Slightly bigger for smoother hover */
 }
 
 /* Game Results */
 .results {
     font-size: 1.5em;
     margin-top: 30px;
+    opacity: 0; /* Hide results initially */
+    transform: scale(0.9); /* Slightly smaller before appearing */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+/* When results update, fade them in */
+.results.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Result Text */
 h2 {
     color: #007bff;
     font-size: 2em;
