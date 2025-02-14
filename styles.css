@@ -1,17 +1,22 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Bubblegum Sans', cursive;
     text-align: center;
     margin: 0;
     padding: 50px;
-    height: 100vh; /* Full height */
+    height: 100vh;
     background: linear-gradient(to bottom, #B3E5FC 5%, #D6F1FF 50%, #EAF8FF 100%);
 }
 
-/* Title */
+/* Cloudy Floating Title */
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Baloo 2', sans-serif;
+    color: #007bff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    animation: float 3s infinite ease-in-out;
 }
 
 /* Choices (Images) */
@@ -23,24 +28,34 @@ h1 {
 }
 
 .choices img {
-    width: 150px;  /* Adjust size */
+    width: 150px;
     height: 150px;
     cursor: pointer;
     border-radius: 15px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .choices img:hover {
-    transform: scale(1.15); /* Slightly bigger for smoother hover */
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Game Results */
 .results {
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-top: 30px;
-    opacity: 0; /* Hide results initially */
-    transform: scale(0.9); /* Slightly smaller before appearing */
+    opacity: 0;
+    transform: scale(0.9);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-weight: 400;
+    font-family: 'Baloo 2', sans-serif;
+    color: #007bff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 20px;
 }
 
 /* When results update, fade them in */
@@ -52,5 +67,13 @@ h1 {
 /* Result Text */
 h2 {
     color: #007bff;
-    font-size: 2em;
+    font-size: 2.2em;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+/* Floating Effect for Title */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px); }
 }
