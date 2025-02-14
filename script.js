@@ -44,7 +44,7 @@ function playGame(userChoice) {
 }
 
 // Set the version number here
-const version = "1.0.1"; // Updated version
+const version = "1.0.2"; // Updated version
 
 // Automatically update version in the footer
 document.addEventListener("DOMContentLoaded", function () {
