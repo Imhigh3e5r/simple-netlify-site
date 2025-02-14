@@ -31,14 +31,14 @@ h1 {
     width: 150px;
     height: 150px;
     cursor: pointer;
-    border-radius: 15px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Slight rounding for smooth edges */
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Remove hover bubble effect */
 .choices img:hover {
     transform: scale(1.2);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: none; /* No shadows */
 }
 
 /* Game Results */
@@ -51,11 +51,10 @@ h1 {
     font-weight: 400;
     font-family: 'Baloo 2', sans-serif;
     color: #007bff;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px 15px;
-    display: inline-block;
-    border-radius: 20px;
+    text-shadow: none; /* Remove text shadows */
+    background: none; /* Remove white background */
+    padding: 0;
+    display: block;
 }
 
 /* When results update, fade them in */
@@ -69,6 +68,7 @@ h2 {
     color: #007bff;
     font-size: 2.2em;
     font-family: 'Bubblegum Sans', cursive;
+    text-shadow: none; /* Remove any shadow effect */
 }
 
 /* Floating Effect for Title */
