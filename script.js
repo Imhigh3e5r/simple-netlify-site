@@ -15,7 +15,22 @@ function playGame(userChoice) {
         result = "You lose! 😢";
     }
 
-    document.getElementById("userChoice").innerText = "You chose: " + userChoice;
-    document.getElementById("computerChoice").innerText = "Computer chose: " + computerChoice;
-    document.getElementById("result").innerText = result;
+    // Select result elements
+    const resultContainer = document.querySelector(".results");
+    const userChoiceText = document.getElementById("userChoice");
+    const computerChoiceText = document.getElementById("computerChoice");
+    const resultText = document.getElementById("result");
+
+    // Remove the animation class to reset it
+    resultContainer.classList.remove("show");
+
+    // Update text content immediately
+    userChoiceText.innerText = "You chose: " + userChoice;
+    computerChoiceText.innerText = "Computer chose: " + computerChoice;
+    resultText.innerText = result;
+
+    // Add a slight delay before adding the animation class
+    setTimeout(() => {
+        resultContainer.classList.add("show");
+    }, 100); // Delay to allow fade-in animation
 }
