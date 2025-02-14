@@ -6,6 +6,7 @@ body {
     padding: 50px;
     height: 100vh;
     background: linear-gradient(to bottom, #B3E5FC 5%, #D6F1FF 50%, #EAF8FF 100%);
+    overflow: hidden; /* Prevents confetti from causing scrollbars */
 }
 
 /* Cloudy Floating Title */
@@ -77,3 +78,24 @@ h2 {
     50% { transform: translateY(10px); }
     100% { transform: translateY(0px); }
 }
+
+/* Confetti Animation */
+@keyframes confetti-fall {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+.confetti {
+    position: fixed;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0;
+    animation: confetti-fall 1s ease-out forwards;
+    z-index: 1000;
+}
+
+/* Different colors for confetti */
+.confetti:nth-child(odd) { background-color: blue; }
+.confetti:nth-child(even) { background-color: yellow; }
