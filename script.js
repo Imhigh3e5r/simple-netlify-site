@@ -44,7 +44,7 @@ function playGame(userChoice) {
 }
 
 // Set the version number here
-const version = "1.0.2"; // Updated version
+const version = "1.0.3"; // Updated version
 
 // Automatically update version in the footer
 document.addEventListener("DOMContentLoaded", function () {
@@ -60,16 +60,16 @@ function launchConfetti() {
 
         // Randomize position, size, and animation duration
         confetti.style.left = Math.random() * 100 + "vw"; 
-        confetti.style.top = Math.random() * 30 - 20 + "vh"; // Start from varying heights
-        confetti.style.animationDuration = Math.random() * 1.8 + 0.7 + "s"; 
+        confetti.style.top = "-5vh"; // Start slightly above the screen
+        confetti.style.animationDuration = Math.random() * 2 + 1 + "s"; 
         confetti.style.width = Math.random() * 10 + 5 + "px"; 
         confetti.style.height = confetti.style.width;
 
         document.body.appendChild(confetti);
 
-        // Remove confetti after animation ends
+        // Ensure confetti falls smoothly and lasts longer
         setTimeout(() => {
             confetti.remove();
-        }, 2000); // Slightly longer duration to make it smoother
+        }, 2500); // Increased duration for smoother effect
     }
 }
