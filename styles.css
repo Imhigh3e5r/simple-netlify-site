@@ -1,11 +1,12 @@
 /* General Styles */
+/* Apply a soft light blue gradient */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 50px;
-    height: 100vh;
-    background: linear-gradient(to bottom, #FFB6C1 10%, #FFDDEE 40%, #FFFFFF 100%);
+    height: 100vh; /* Full height */
+    background: linear-gradient(to bottom, #B3E5FC 10%, #E3F2FD 40%, #FFFFFF 100%);
 }
 
 /* Title */
