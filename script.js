@@ -43,6 +43,15 @@ function playGame(userChoice) {
     }, 100);
 }
 
+// Set the version number here
+const version = "1.0.0";
+
+// Automatically update version in the footer
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("1.0").innerText = version;
+});
+
+
 // Function to create confetti
 function launchConfetti() {
     const confettiCount = 40; // Number of confetti pieces
