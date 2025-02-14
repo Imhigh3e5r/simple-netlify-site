@@ -1,15 +1,9 @@
+/* Apply a gradient background */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 50px;
-    background-color: #f4f4f4;
-    /* Apply a gradient background */
-body {
-    background: linear-gradient(to bottom, #87CEFA, #E0FFFF);
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
+    height: 100vh; /* Full-screen height */
+    background: linear-gradient(to bottom, #87CEFA, #E0FFFF); /* Light blue gradient */
 }
