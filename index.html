@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Netlify Site</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Netlify Site!</h1>
-    <p>This is the simplest way to deploy a website on Netlify.</p>
+    <h1>Rock Paper Scissors</h1>
+    
+    <p>Choose one to play:</p>
+
+    <div class="choices">
+        <img src="https://images.vexels.com/media/users/3/145684/isolated/preview/01c67d3d73e2e6420cff24303fc5becf-gravel-rock.png" alt="Rock" onclick="playGame('Rock')">
+        <img src="https://www.freeiconspng.com/thumbs/paper/transparent-image-lined-paper-school-book-26.png" alt="Paper" onclick="playGame('Paper')">
+        <img src="https://i.imgur.com/gR1fLLb.png" alt="Scissors" onclick="playGame('Scissors')">
+    </div>
+
+    <div class="results">
+        <p id="userChoice">You chose: </p>
+        <p id="computerChoice">Computer chose: </p>
+        <h2 id="result"></h2>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
